@@ -3,4 +3,7 @@
         <file>main.qml</file>
         <file>Button.qml</file>
     </qresource>
+    <qresource prefix="/QtCadaques13">
+        <file>Dial.qml</file>
+    </qresource>
 </RCC>
