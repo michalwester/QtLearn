@@ -5,5 +5,9 @@
     </qresource>
     <qresource prefix="/QtCadaques13">
         <file>Dial.qml</file>
+        <file>Analog.qml</file>
+        <file>analog_display.png</file>
+        <file>digital_display.png</file>
+        <file>Digital.qml</file>
     </qresource>
 </RCC>
