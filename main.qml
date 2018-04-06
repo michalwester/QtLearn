@@ -14,12 +14,24 @@ ApplicationWindow {
             title: "QmlBook"
 
             Menu {
+                title: "QtCadaques04"
+
+                MenuItem {
+                    text: "ThisLabel"
+                    onTriggered: {
+                        contentLoader.source = "qrc:/QtCadaques04/ThisLabel.qml"
+                    }
+                }
+            }
+
+            Menu {
                 title: "QtCadaques13"
 
                 MenuItem {
                     text: "Dial"
                     onTriggered: {
-                        contentLoader.source = "qrc:/QtCadaques13/Dial.qml"
+                        //contentLoader.source = "qrc:/QtCadaques13/Dial.qml"
+                        contentLoader.source = "Button.qml"
                     }
                 }
             }

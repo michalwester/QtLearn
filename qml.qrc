@@ -10,4 +10,7 @@
         <file>digital_display.png</file>
         <file>Digital.qml</file>
     </qresource>
+    <qresource prefix="/QtCadaques04">
+        <file>ThisLabel.qml</file>
+    </qresource>
 </RCC>
