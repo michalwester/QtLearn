@@ -1,15 +1,33 @@
 import QtQuick 2.6
 import QtQuick.Window 2.2
+import QtQuick.Controls 1.4
 import "qrc:/QtCadaques13"
 
-Window {
+ApplicationWindow {
     visible: true
     visibility: "Maximized"
     title: qsTr("QtLearn")
 
+    menuBar: MenuBar {
 
+        Menu {
+            title: "QmlBook"
 
-    Dial {
-        anchors.centerIn: parent
+            Menu {
+                title: "QtCadaques13"
+
+                MenuItem {
+                    text: "Dial"
+                    onTriggered: {
+                        contentLoader.source = "qrc:/QtCadaques13/Dial.qml"
+                    }
+                }
+            }
+        }
+    }
+
+    Loader {
+        id: contentLoader
+        anchors.fill: parent
     }
 }
