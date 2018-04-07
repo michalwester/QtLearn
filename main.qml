@@ -30,8 +30,7 @@ ApplicationWindow {
                 MenuItem {
                     text: "Dial"
                     onTriggered: {
-                        //contentLoader.source = "qrc:/QtCadaques13/Dial.qml"
-                        contentLoader.source = "Button.qml"
+                        contentLoader.source = "qrc:/QtCadaques13/Dial.qml"
                     }
                 }
             }
@@ -41,5 +40,6 @@ ApplicationWindow {
     Loader {
         id: contentLoader
         anchors.fill: parent
+        focus: true
     }
 }

@@ -3,54 +3,64 @@ import QtQuick 2.6
 Item {
     anchors.fill: parent
 
-    Text {
-        id: thisLabel
+    Column {
+        spacing: 10
 
         anchors.centerIn: parent
 
-        width: 300
-        height: 150;
+        Text {
+            id: thisLabel
 
-        property int times: 24
-        property alias anotherTimes: thisLabel.times
+            width: 300
+            height: 150;
 
-        text: "Greetings" + times
+            property int times: 24
+            property alias anotherTimes: thisLabel.times
 
-        font.family: "Ubuntu"
-        font.pixelSize: 24
+            text: "Greetings" + times
 
-        // KeyNavigation is an attached property
-        KeyNavigation.tab: otherLabel
+            font.family: "Ubuntu"
+            font.pixelSize: 24
 
-        onHeightChanged: console.log('heigth:', height)
+            // KeyNavigation is an attached property
+            KeyNavigation.tab: otherLabel
 
-        // focus is need to receive key events
-        focus: true
+            onHeightChanged: console.log('heigth:', height)
 
-        color: focus ? "red" : "black"
+            // focus is need to receive key events
+            focus: true
 
-        Rectangle {
-            anchors.fill: parent
+            color: focus ? "red" : "black"
 
-            color: "red"
-            border.color: "red"
-            border.width: 4
+            Rectangle {
+                anchors.fill: parent
+
+                color: "transparent"
+                border.color: "red"
+                border.width: 1
+            }
         }
-    }
 
-    Text {
-        id: otherLabel
+        Text {
+            id: otherLabel
 
-        width: 300
-        height: 150
+            width: 300
+            height: 150
 
-        anchors.top: thisLabel.bottom + 10
+            text: "otherLabel"
 
-        text: "otherLabel"
+            // KeyNavigation is an attached property
+            KeyNavigation.tab: thisLabel
 
-        focus: true
-        KeyNavigation.tab: thisLabel
+            color: focus ? "red" : "black"
 
-        color: focus ? "red" : "black"
+            Rectangle {
+                anchors.fill: parent
+
+                color: "transparent"
+                border.color: "red"
+                border.width: 1
+            }
+        }
     }
 }
