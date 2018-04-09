@@ -8,16 +8,10 @@ Item {
     height: 1000
     state: "analog"
 
-    property int speed: 0
-
     Loader {
         id: dialLoader
 
         anchors.centerIn: parent
-
-        onLoaded: {
-            binder.target = dialLoader.item;
-        }
     }
 
     Button {
@@ -42,13 +36,6 @@ Item {
         anchors.right: parent.right
 
         onButtonClick: parent.state = "digital"
-    }
-
-    Binding {
-        id: binder
-
-        property: "speed"
-        value: parent.speed
     }
 
     states: [

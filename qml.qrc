@@ -9,6 +9,9 @@
         <file>analog_display.png</file>
         <file>digital_display.png</file>
         <file>Digital.qml</file>
+        <file>create-component.js</file>
+        <file>dynamic-image.qml</file>
+        <file>Dynamic.qml</file>
     </qresource>
     <qresource prefix="/QtCadaques04">
         <file>ThisLabel.qml</file>

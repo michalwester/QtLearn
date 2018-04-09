@@ -33,6 +33,13 @@ ApplicationWindow {
                         contentLoader.source = "qrc:/QtCadaques13/Dial.qml"
                     }
                 }
+
+                MenuItem {
+                    text: "Dynamic"
+                    onTriggered: {
+                        contentLoader.source = "qrc:/QtCadaques13/Dynamic.qml"
+                    }
+                }
             }
         }
     }
